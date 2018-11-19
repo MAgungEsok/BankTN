@@ -1,0 +1,24 @@
+{{ define "New" }}
+  {{ template "Header" }}
+    {{ template "Menu" }}
+    <div>
+      <form action="insert" method="POST">
+        <label for="fname">Name</label>
+        <input type="text" name="name" placeholder="Costumer Name..">
+
+        <label for="lname">Account Number</label>
+        <input type="text" name="acountNumber" placeholder="Acccount Number..">
+
+
+        <label for="lname">Email</label>
+        <input type="text"  name="email" placeholder="Email Costumer..">
+
+        <label for="country">First Deposit</label>
+        <input type="text" name="firstDeposit" placeholder="First Deposit..">
+
+
+        <input type="submit" value="Save user">
+      </form>
+    </div>
+  {{ template "Footer" }}
+{{ end }}

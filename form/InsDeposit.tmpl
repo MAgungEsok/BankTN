@@ -1,0 +1,21 @@
+{{ define "InsDeposit" }}
+  {{ template "Header" }}
+    {{ template "Menu" }}
+    <div>
+      <form action="insDeposit" method="POST">
+
+        <label for="lname">Account Number</label>
+        <select name="idCostumer">
+          {{ range . }}
+          <option value="{{ .Id }}">{{ .Name }} || {{ .AcountNumber }}</option>
+          {{ end }}
+        </select>
+
+        <label for="country">Deposit</label>
+        <input type="text" name="deposit" placeholder="Deposit..">
+
+        <input type="submit" value="Save user">
+      </form>
+    </div>
+  {{ template "Footer" }}
+{{ end }}

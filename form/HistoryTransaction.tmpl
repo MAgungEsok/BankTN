@@ -1,0 +1,25 @@
+{{ define "HistoryTransaction" }}
+  {{ template "Header" }}
+    {{ template "Menu"  }}
+    <h2> Registered </h2>
+    <table border="1">
+      <thead>
+      <tr>
+        <td>AcountNumber</td>
+        <td>AcountNumber</td>
+
+        <td>Transaction</td>
+      </tr>
+       </thead>
+       <tbody>
+    {{ range . }}
+      <tr>
+        <td>{{ .AcountNumber }}</td>
+        <td>{{ .Name }}</td>
+        <td> {{ .Deposit }} </td>
+      </tr>
+    {{ end }}
+       </tbody>
+    </table>
+  {{ template "Footer" }}
+{{ end }}

@@ -1,0 +1,31 @@
+{{ define "Index" }}
+  {{ template "Header" }}
+    {{ template "Menu"  }}
+    <div>
+    <h2> Registered </h2>
+    <table border="1">
+      <thead>
+      <tr>
+        <td>ID</td>
+        <td>Acount Number</td>
+        <td>name</td>
+        <td>Email</td>
+        <td>Process</td>
+      </tr>
+       </thead>
+       <tbody>
+    {{ range . }}
+      <tr>
+        <td>{{ .Id }}</td>
+        <td> {{ .Name }} </td>
+        <td> {{ .AcountNumber }} </td>
+        <td>{{ .Email }} </td>
+        <td><a href="/ShowTransaction?id={{ .Id }}">Show Transaction</a></td>
+
+      </tr>
+    {{ end }}
+       </tbody>
+    </table>
+  </div>
+  {{ template "Footer" }}
+{{ end }}
